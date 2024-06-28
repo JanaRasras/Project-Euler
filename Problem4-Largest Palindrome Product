@@ -1,0 +1,29 @@
+'''
+ Problem4-Largest Palindrome Product
+
+ Jana Rusrus 
+
+ https://projecteuler.net/problem=4
+'''
+
+def is_pal(num):
+    
+    str_num = str(num)
+    return str_num == str_num[::-1]
+    
+def largest_pal(digit):
+    max_pal = 0
+    start = 10 **(digit - 1)
+    end = 10 ** digit -1 
+    
+    for i in range(end, start-1, -1):
+        for j in range (i, start-1, -1):
+            product = i*j
+            if is_pal(product) and product > max_pal:
+                max_pal = product
+    return max_pal
+    
+largest_palindrome = largest_pal(3)
+print( largest_palindrome)
+    
+
