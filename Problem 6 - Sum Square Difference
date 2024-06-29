@@ -1,0 +1,32 @@
+'''
+ Problem 6 - Sum Square Difference
+
+
+ Jana Rusrus 
+
+ https://projecteuler.net/problem=6
+'''
+
+def sum_numbers(number):
+    sum = 0
+    for i in range(number+1):
+        l = i ** 2
+        sum += l
+    return sum
+    
+def square_sum_numbers(number):
+    sum = 0
+    for i in range(number+1):
+        sum += i
+        sqaure = sum **2
+    return sqaure
+
+
+
+number = 100
+result1 = sum_numbers(number)
+result2 = square_sum_numbers(number)
+diffrence = result2 - result1
+print(diffrence)
+
+
