@@ -1,0 +1,23 @@
+'''
+ Problem5-Smallest Multiple
+
+ Jana Rusrus 
+
+ https://projecteuler.net/problem=5
+'''
+
+from math import gcd
+from functools import reduce
+
+
+def lcm(a, b):
+    return a * b // gcd(a, b)
+
+def lcm_multiple(numbers):
+    return reduce(lcm, numbers)
+
+numbers = range(1, 21)
+result = lcm_multiple(numbers)
+print(f"The smallest positive number that is evenly divisible by all of the numbers from 1 to 20 is: {result}")
+
+
