@@ -1,0 +1,17 @@
+"""
+ Problem 16-Power Digit Sum
+
+ Jana Rusrus 
+
+ https://projecteuler.net/problem=16
+"""
+
+number = 2 ** 1000
+
+number_str = str(number)
+
+digit_sum = sum(int(digit) for digit in number_str)
+
+print(digit_sum)
+
+
